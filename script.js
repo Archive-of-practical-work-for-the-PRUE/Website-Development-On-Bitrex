@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Лабораторная работа 1: Верстка сайта
+
     // Функция расчета возраста
     function calculateAge(birthDate) {
         const today = new Date();
@@ -355,4 +357,141 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Обработчик формы обратной связи
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Получаем значения полей формы
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // В реальном приложении здесь был бы код для отправки данных на сервер
+            console.log('Форма отправлена:', { name, email, subject, message });
+
+            // Показываем сообщение об успешной отправке
+            alert(`Спасибо, ${name}! Ваше сообщение отправлено.`);
+
+            // Очищаем форму
+            contactForm.reset();
+        });
+    }
+});
+
+// jQuery функциональность
+// Лабораторная работа: Изучение основ JavaScript, библиотек jQuery и jQuery UI
+
+// 1. Метод .ready()
+$(document).ready(function () {
+    // 2. Метод .click() - добавим клик по кнопкам технологий
+    $('.tech-card').click(function () {
+        // 3. Метод .addClass() - добавим класс при клике
+        $(this).addClass('clicked');
+
+        // 4. Метод .css() - изменим стиль при клике
+        $(this).css('border-color', '#00f5ff');
+
+        // 5. Метод .animate() - анимируем элемент
+        $(this).animate({
+            opacity: 0.8
+        }, 300, function () {
+            $(this).animate({
+                opacity: 1
+            }, 300);
+        });
+
+        // Применено минимум 5 методов jQuery как требуется в лабораторной работе:
+        // .ready(), .click(), .addClass(), .css(), .animate()
+
+        // Удалим класс через некоторое время
+        setTimeout(() => {
+            $(this).removeClass('clicked');
+            $(this).css('border-color', '');
+        }, 1000);
+    });
+
+    // Добавим анимацию для навигационных ссылок
+    $('.nav-link').hover(
+        function () {
+            // При наведении
+            $(this).addClass('hovered');
+        },
+        function () {
+            // При убирании курсора
+            $(this).removeClass('hovered');
+        }
+    );
+
+    // Анимация для секций при прокрутке с использованием jQuery
+    $(window).scroll(function () {
+        $('.section-title').each(function () {
+            const elementTop = $(this).offset().top;
+            const elementBottom = elementTop + $(this).outerHeight();
+            const viewportTop = $(window).scrollTop();
+            const viewportBottom = viewportTop + $(window).height();
+
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                // 6. Метод .fadeIn() - плавное появление
+                $(this).fadeIn();
+            }
+        });
+    });
+
+    // Использование jQuery UI - виджет Accordion для списка навыков
+    // Создадим массив навыков
+    // Это первый компонент jQuery UI, как требуется в лабораторной работе
+    const skills = [
+        { name: 'Python', level: 90, description: 'Продвинутый уровень. Используется для разработки Telegram ботов, Data Science и веб-приложений.' },
+        { name: 'JavaScript', level: 75, description: 'Средний уровень. Используется для фронтенд разработки и интерактивности сайта.' },
+        { name: 'HTML/CSS', level: 80, description: 'Продвинутый уровень. Создание адаптивных и современных веб-интерфейсов.' },
+        { name: 'SQL', level: 70, description: 'Средний уровень. Работа с базами данных PostgreSQL, MySQL, T-SQL.' },
+        { name: 'Git', level: 85, description: 'Продвинутый уровень. Контроль версий, работа в команде, CI/CD.' }
+    ];
+
+    // Создадим HTML для accordion
+    let accordionHtml = '';
+    skills.forEach((skill, index) => {
+        accordionHtml += `
+        <h3>${skill.name}</h3>
+        <div>
+            <p>${skill.description}</p>
+            <p>Уровень владения: ${skill.level}%</p>
+            <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: ${skill.level}%"></div>
+            </div>
+        </div>`;
+    });
+
+    // Добавим accordion в страницу
+    $('#skills-accordion').html(accordionHtml);
+
+    // Инициализируем jQuery UI Accordion
+    $('#skills-accordion').accordion({
+        collapsible: true,
+        heightStyle: "content",
+        active: false
+    });
+
+    // Использование jQuery UI - виджет Dialog для модального окна
+    // Это второй компонент jQuery UI, как требуется в лабораторной работе
+    $('#open-dialog').click(function () {
+        $('#dialog-modal').dialog({
+            modal: true,
+            width: 400,
+            height: 300,
+            buttons: {
+                "Закрыть": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+
+    // Продемонстрировано 2 компонента из библиотеки jQuery UI как требуется в лабораторной работе:
+    // 1. Accordion (аккордеон) - для отображения навыков
+    // 2. Dialog (диалоговое окно) - для модального окна
 });

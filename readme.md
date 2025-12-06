@@ -1,7 +1,45 @@
-# Сайт портфолио
+# Практические работы по "Разработке сайта в среде 1С-Битрикс"
+Репозиторий с практическими работами 3 курса по предмету "Разработке сайта в среде 1С-Битрикс", куда включены 3 практические работы, первая по HTML+CSS+JS, вторая по PHP и третья - сайт 1С-Битрикс.
+
+Навигация:
+
+1. [Практическая работа № 1 - Разработка сайта на HTML, CSS, JS](https://github.com/Archive-of-practical-work-for-the-PRUE/Website-Development-On-Bitrex)
+2. [Практическая работа № 2 - Разработка сайта на PHP]()
+3. [Практическая работа № 3 - Разработка сайта на 1С-Битрикс]()
+
+## Практическая работа 1 - Сайт портфолио на HTML, CSS, JS
 
 Мой личный сайт-портфолио, демонстрирующий мои навыки, образование, опыт работы и мои проекты.
-![image](https://raw.githubusercontent.com/Merrcurys/Portfolio-Website/refs/heads/master/img/telegram-view.jpg)
+![image](https://raw.githubusercontent.com/Archive-of-practical-work-for-the-PRUE/Website-Development-On-Bitrex/refs/heads/master/img/telegram-view.jpg)
+
+## Требования
+
+### 1.1: Верстка сайта
+Сайт содержит все обязательные элементы:
+- title страницы
+- Заголовок
+- Текст
+- Изображения
+- Ссылки
+- Список
+- Таблица (реализована через аккордеон jQuery UI)
+- Форма (обратная связь)
+- Header, Footer
+
+### 1.2: CSS свойства
+Использованы основные возможности CSS:
+- Селекторы тегов, классов, идентификаторов
+- Контекстные, дочерние, смежные селекторы
+- Селекторы псевдоклассов
+- Принцип каскадирования
+- Удаление подчеркивания ссылок
+- Изменение стиля маркеров списка
+- Свойства для форматирования текста
+- Градиенты и анимации (элементы CSS3)
+
+### 1.3: JavaScript, jQuery и jQuery UI
+- Минимум 5 методов jQuery (.ready(), .click(), .addClass(), .css(), .animate())
+- Минимум 2 компонента jQuery UI (Accordion, Dialog)
 
 ## Особенности
 
@@ -14,6 +52,8 @@
 - HTML
 - CSS
 - JavaScript
+- jQuery
+- jQuery UI
 
 ## Адаптивность
 
@@ -38,7 +78,7 @@ portfolio/
 1. Клонируйте репозиторий
 
 ```bash
-git clone https://github.com/Merrcurys/Portfolio-Website.git
+git clone https://github.com/Archive-of-practical-work-for-the-PRUE/Website-Development-On-Bitrex.git
 ```
 
 2. Откройте `index.html` в браузере
