@@ -4,7 +4,7 @@
 Навигация:
 
 1. [Практическая работа № 1 - Разработка сайта на HTML, CSS, JS](https://github.com/Archive-of-practical-work-for-the-PRUE/Website-Development-On-Bitrex)
-2. [Практическая работа № 2 - Разработка сайта на PHP]()
+2. [Практическая работа № 2 - Разработка сайта на PHP](https://github.com/Archive-of-practical-work-for-the-PRUE/Website-Development-On-Bitrex/tree/php)
 3. [Практическая работа № 3 - Разработка сайта на 1С-Битрикс]()
 
 ## Практическая работа 1 - Сайт портфолио на HTML, CSS, JS
